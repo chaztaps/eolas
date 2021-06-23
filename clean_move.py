@@ -1,5 +1,5 @@
 """MIGRATE ALL TO OBJ"""
-import os,sys
+import os,sys,shutil
 
 print('migrating...')
 #gather aug folders
