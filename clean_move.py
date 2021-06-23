@@ -23,8 +23,7 @@ for source_dir in folders:
 print('cleaning text')
 for i in os.listdir(target_dir):
     if ".xml.txt" in i:
-        fullpath = target_dir+i
-        newpath = fullpath.replace('.xml.txt','.txt')
+        new_path = i.replace('.xml.txt','.txt')
         os.rename(fullpath,newpath)
 
 print('done')
