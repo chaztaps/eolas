@@ -8,6 +8,10 @@ import concurrent.futures
 from PIL import Image, ImageDraw,ImageOps,ImageEnhance
 Image.MAX_IMAGE_PIXELS = None
 
+tags = ['deer','sheep','negatives']
+for t in tags:
+    os.makedirs('augmented/{}'.format(t))
+
 print('number of images to augment:')
 INPUT = int(input())
 print()
