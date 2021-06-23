@@ -3,13 +3,13 @@ import os,sys,shutil
 
 print('migrating...')
 #gather aug folders
-folders = ['augmented/deer',
-           'augmented/sheep',
-           'augmented/negatives']
+folders = ['/augmented/deer',
+           '/augmented/sheep',
+           '/augmented/negatives']
 
 
 #cycle through each aug folder and move to obj
-target_dir = 'eolas/obj'
+target_dir = '/obj'
 for source_dir in folders:       
     file_names = os.listdir(source_dir)
     for file_name in file_names:
