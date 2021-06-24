@@ -8,11 +8,16 @@ import concurrent.futures
 from PIL import Image, ImageDraw,ImageOps,ImageEnhance
 Image.MAX_IMAGE_PIXELS = None
 
+#creating paths
 tags = ['deer','sheep','negatives']
 for t in tags:
     path = 'augmented/{}'.format(t)
     shutil.rmtree(path, ignore_errors=True)
     os.makedirs(path)
+
+path = 'backup/'
+shutil.rmtree(path, ignore_errors=True)
+os.makedirs(path)
 
 print('number of images to augment:')
 INPUT = int(input())
