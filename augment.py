@@ -10,7 +10,9 @@ Image.MAX_IMAGE_PIXELS = None
 
 tags = ['deer','sheep','negatives']
 for t in tags:
-    os.makedirs('augmented/{}'.format(t))
+    path = 'augmented/{}'.format(t)
+    shutil.rmtree(path, ignore_errors=True)
+    os.makedirs(path)
 
 print('number of images to augment:')
 INPUT = int(input())
